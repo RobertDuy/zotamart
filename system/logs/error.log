@@ -1,0 +1,2 @@
+2015-04-16 9:16:01 - PHP Notice:  Undefined variable: header in E:\xampp\htdocs\zotamart\application\view\theme\default\template\checkout\checkout.tpl on line 1
+2015-04-16 9:16:01 - PHP Notice:  Undefined variable: footer in E:\xampp\htdocs\zotamart\application\view\theme\default\template\checkout\checkout.tpl on line 435
