@@ -1,8 +1,8 @@
 <?php
 // HTTP
 define('HTTP_SERVER', 'http://localhost/zotamart/');
-define('STATIC_PATH', '/var/www/html/zotamart');
-define('STATIC_FILE_PATH', 'application/view/theme/default/static');
+define('STATIC_PATH', 'D:/xampp/htdocs/zotamart');
+define('STATIC_FILE_PATH', HTTP_SERVER . 'application/view/theme/default/static');
 // HTTPS
 define('HTTPS_SERVER', 'http://localhost/zotamart/');
 

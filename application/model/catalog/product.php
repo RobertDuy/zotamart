@@ -2,7 +2,16 @@
 class ModelCatalogProduct extends Model {
 
     public function getProductsPromotions($category_id){
-        $query = $this->db->query("SELECT DISTINCT *, p.product_id, pd.name AS name, p.image, p.price FROM product p LEFT JOIN product_description pd ON p.product_id = pd.product_id WHERE p.isPromotionProduct = 1 AND p.category_id = ". (int)$category_id);
+        $query = $this->db->query("SELECT DISTINCT *, p.product_id, pd.name AS name, p.image, p.price FROM product p LEFT JOIN product_description pd ON p.product_id = pd.product_id
+                        WHERE p.isPromotionProduct = 1 AND
+                        p.product_id in (SELECT product_id FROM `". DB_PREFIX . "product_to_category` WHERE category_id = ". (int)$category_id .")");
+        return $query->rows;
+    }
+
+    public function getProductsInCategory($category_id){
+        $query = $this->db->query("SELECT DISTINCT *, p.product_id, pd.name AS name, p.image, p.price FROM product p LEFT JOIN product_description pd ON p.product_id = pd.product_id
+                        WHERE p.isPromotionProduct = 0 AND
+                        p.product_id in (SELECT product_id FROM `". DB_PREFIX . "product_to_category` WHERE category_id = ". (int)$category_id .")");
         return $query->rows;
     }
 

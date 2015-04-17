@@ -28,7 +28,7 @@ class ControllerCommonHome extends Controller {
                     'price' => $rawProductPromotion['price'],
                     'product_name' => $rawProductPromotion['name'],
                     'image' => $this->model_tool_image->resize($rawProductPromotion['image'], 250, 350),
-                    'link' => $this->url->link('product/product', 'categories_path='. $raw_category['category_id']. '&product_id='. $rawProductPromotion['product_id'])
+                    'link' => $this->url->link('product/detail', 'categories_path='. $raw_category['category_id']. '&product_id='. $rawProductPromotion['product_id'])
                 );
             }
 

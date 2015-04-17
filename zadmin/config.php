@@ -2,7 +2,7 @@
 // HTTP
 define('HTTP_SERVER', 'http://localhost/zotamart/zadmin/');
 define('HTTP_CATALOG', 'http://localhost/zotamart/');
-define('STATIC_PATH', '/var/www/html/zotamart');
+define('STATIC_PATH', 'D:/xampp/htdocs/zotamart');
 
 // HTTPS
 define('HTTPS_SERVER', 'http://localhost/zotamart/zadmin/');

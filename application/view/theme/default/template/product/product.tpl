@@ -11,7 +11,6 @@
 		<div class="categories">
 
 			<div class="category_toc">
-
 				<ul>
 					<li><a href="#category_0">Doughnuts</a></li>
 					<li><a href="#category_1">Fun-Sized</a></li>
@@ -20,440 +19,49 @@
 					<li><a href="#category_4">Coffee</a></li>
 					<li><a href="#category_10">Merchandise</a></li>
 				</ul>
-
 			</div>
 
 				<section class="category" id="category_1">
-					<h1>Fun-Sized</h1>
+					<h1>Sản phẩm nổi bật</h1>
 					<ul class="product_wrap">
-						<li>
-							<a href="product/dozen-doughnut-holes-vanilla">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/VanillaHoles_small.png"/>
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Dozen Doughnut Holes - Vanilla</h4>
-											<div class="price">$5</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="product/dozen-doughnut-holes-red-velvet">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/RedVelvetHoles_small.png">
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Dozen Doughnut Holes - Red Velvet</h4>
-											<div class="price">$5</div>
-									</div>
-
-								</div>
-							</a>
-						</li>
-
-						<li>
-							<a href="product/dozen-doughnut-holes-chocolate">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/ChocolateHoles_small.png">
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Dozen Doughnut Holes - Chocolate</h4>
-											<div class="price">$5</div>
-									</div>
-								</div>
-							</a>
-
-						</li>
-						<li>
-							<a href="product/16">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/_0018_mini_small.png"/>
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Dozen Minis</h4>
-											<div class="price">$12</div>
-									</div>
-								</div>
-							</a>
-						</li>
+                        <?php foreach($promotion_products as $promotion_product) { ?>
+                            <li>
+                                <a href="<?php echo $promotion_product['link'] ?>">
+                                    <div class="thumb_wrap">
+                                        <img src="<?php echo $promotion_product['image'];?>"/>
+                                    </div>
+                                    <div class="menu_item_controls">
+                                        <div class="meta">
+                                            <h4><?php echo $promotion_product['product_name'];?></h4>
+                                            <div class="price"><?php echo $promotion_product['price']?></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        <?php } ?>
 					</ul>
-
 				</section>
 
 				<section class="category" id="category_2">
-					<h1>Specialty</h1>
+					<h1>Sản phẩm được ưa chuộng</h1>
 					<ul class="product_wrap">
-						<li>
-							<a href="product/jumbo-doughnut" >
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/Jumbo_small.png">
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Jumbo Doughnut</h4>
-											<div class="price">$18</div>
-									</div>
-								</div>
-							</a>
-
-						</li>
-						<li>
-							<a href="product/17">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/_0007_largeplatter_small.png">
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Minis Platter</h4>
-											<div class="price">$38</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="product/doughnut-fondue-platter">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/_0010_fondue_small.png">
-								</div>
-
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Doughnut Fondue Platter</h4>
-											<div class="price">$38</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="product/gender-reveal-doughnut" >
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/GenderReveal_small.png">
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Gender Reveal Doughnut</h4>
-											<div class="price">$3</div>
-									</div>
-								</div>
-							</a>
-						</li>
+                        <?php foreach($products as $product) { ?>
+                        <li>
+                            <a href="<?php echo $product['link'];?>" >
+                                <div class="thumb_wrap">
+                                    <img src="<?php echo $product['image']?>">
+                                </div>
+                                <div class="menu_item_controls">
+                                    <div class="meta">
+                                        <h4><?php echo $product['product_name']?></h4>
+                                        <div class="price"><?php echo $product['price']?></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <?php } ?>
 					</ul>
-
 				</section>
-
-				<section class="category" id="category_3">
-					<h1>Beverages</h1>
-					<ul class="product_wrap">
-						<li>
-							<a href="product/27">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/_0003_milkskim_small.png">
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Skim Milk</h4>
-											<div class="price">$1.10</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="product/28">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/_0002_milkchoc_small.png"/>
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Chocolate Milk</h4>
-											<div class="price">$1.10</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="product/29">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/_0001_2percent_small.png"/>
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>2% Milk</h4>
-											<div class="price">$1.10</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="product/fiji-water">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/FijiWater_small.png"/>
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Fiji Water</h4>
-											<div class="price">$3.50</div>
-									</div>
-								</div>
-
-							</a>
-
-						</li>
- 
-
-						<li>
-							<a href="product/31">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/_0004_orangejuice_small.png"/>
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Orange Juice</h4>
-											<div class="price">$3</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="product/48">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/DietPepsi_small.png"/>
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Diet Pepsi</h4>
-											<div class="price">$1.75</div>
-									</div>
-								</div>
-							</a>
-
-						</li>
-						<li>
-							<a href="product/49">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/PureLeafTea_small.png"/>
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Pure Leaf Sweet Iced Tea</h4>
-											<div class="price">$2.50</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						
-						<li>
-							<a href="product/pure-leaf-unsweetened-iced-tea">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/PureLeafTea_small.png"/>
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Pure Leaf Unsweetened Iced Tea</h4>
-											<div class="price">$2.50</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="product/51">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/PureLeafTea_small.png"/>
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Pure Leaf Green Tea with Honey</h4>
-											<div class="price">$2.50</div>
-									</div>
-								</div>
-							</a>
-
-						</li>
-						<li>
-							<a href="product/52">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/DrySoda_small.png"/>
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>DRY Soda - Blood Orange</h4>
-											<div class="price">$2.50</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="product/53">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/DrySoda_small.png"/>
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>DRY Soda - Vanilla Bean</h4>
-											<div class="price">$2.50</div>
-									</div>
-
-								</div>
-							</a>
-
-						</li>
-						<li>
-							<a href="product/54">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/DrySoda_small.png"/>
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>DRY Soda - Juniper Berry</h4>
-											<div class="price">$2.50</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="product/55">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/DrySoda_small.png"/>
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>DRY Soda - Lavender</h4>
-											<div class="price">$2.50</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="product/56">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/DrySoda_small.png"/>
-								</div>
-
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>DRY Soda - Wild Lime</h4>
-											<div class="price">$2.50</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="product/57">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/DrySoda_small.png"/>
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>DRY Soda - Cucumber</h4>
-											<div class="price">$2.50</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="product/58">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/DrySoda_small.png"/>
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>DRY Soda - Rhubarb</h4>
-											<div class="price">$2.50</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="product/59">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/PepsiThrowback_small.png"/>
-								</div>
-
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Pepsi</h4>
-											<div class="price">$1.75</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="product/60">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/SierraMist_small.png"/>
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Sierra Mist</h4>
-											<div class="price">$1.75</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="product/61">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/NakedJuice_small.png"/>
-								</div>
-
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Naked Juice - Red Machine</h4>
-											<div class="price">$5</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="product/62">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/NakedJuice_small.png"/>
-								</div>
-
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Naked Juice - Green Machine</h4>
-											<div class="price">$5</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="product/63">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/NakedJuice_small.png"/>
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Naked Juice - Berry Blast</h4>
-											<div class="price">$5</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="product/64">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/NakedJuice_small.png"/>
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Naked Juice - Orange Mango</h4>
-											<div class="price">$5</div>
-									</div>
-								</div>
-							</a>
-						</li>
-					</ul>
-
-				</section>
-				
-				
-			
 		</div>
 
 		<aside class="specials">

@@ -5,7 +5,7 @@
 		<div class="photos">
 			<div class="photo_wrap">
 				<div class="main">
-				<img src="<?php echo STATIC_FILE_PATH; ?>/images/_0013_chocolate4_large.png" >
+				    <img src="<?php echo STATIC_FILE_PATH; ?>/images/_0013_chocolate4_large.png" >
 				</div>
 				<div class="thumbs">
 					<ul>
