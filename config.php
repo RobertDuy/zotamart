@@ -1,7 +1,7 @@
 <?php
 // HTTP
 define('HTTP_SERVER', 'http://localhost/zotamart/');
-define('STATIC_PATH', 'E:/xampp/htdocs/zotamart');
+define('STATIC_PATH', '/var/www/html/zotamart');
 define('STATIC_FILE_PATH', 'application/view/theme/default/static');
 // HTTPS
 define('HTTPS_SERVER', 'http://localhost/zotamart/');
@@ -23,6 +23,6 @@ define('DIR_LOGS', STATIC_PATH.'/system/logs/');
 define('DB_DRIVER', 'mysqli');
 define('DB_HOSTNAME', 'localhost');
 define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'root');
 define('DB_DATABASE', 'zotamart');
 define('DB_PREFIX', '');

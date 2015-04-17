@@ -2,7 +2,7 @@
 // HTTP
 define('HTTP_SERVER', 'http://localhost/zotamart/zadmin/');
 define('HTTP_CATALOG', 'http://localhost/zotamart/');
-define('STATIC_PATH', 'E:/xampp/htdocs/zotamart');
+define('STATIC_PATH', '/var/www/html/zotamart');
 
 // HTTPS
 define('HTTPS_SERVER', 'http://localhost/zotamart/zadmin/');
@@ -26,6 +26,6 @@ define('DIR_CATALOG', STATIC_PATH.'/application/');
 define('DB_DRIVER', 'mysqli');
 define('DB_HOSTNAME', 'localhost');
 define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'root');
 define('DB_DATABASE', 'zotamart');
 define('DB_PREFIX', '');

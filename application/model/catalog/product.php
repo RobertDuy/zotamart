@@ -1,5 +1,11 @@
 <?php
 class ModelCatalogProduct extends Model {
+
+    public function getProductsPromotions($category_id){
+        $query = $this->db->query("SELECT DISTINCT *, p.product_id, pd.name AS name, p.image, p.price FROM product p LEFT JOIN product_description pd ON p.product_id = pd.product_id WHERE p.isPromotionProduct = 1 AND p.category_id = ". (int)$category_id);
+        return $query->rows;
+    }
+
 	public function updateViewed($product_id) {
 		$this->db->query("UPDATE " . DB_PREFIX . "product SET viewed = (viewed + 1) WHERE product_id = '" . (int)$product_id . "'");
 	}

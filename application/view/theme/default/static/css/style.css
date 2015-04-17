@@ -4681,8 +4681,17 @@ footer {
       font-weight: normal;
       font-size: 64px;
       border-bottom: 1px dashed #f66b34;
-      margin-top: .75em; }
-      @media (max-width: 600px) {
+      margin-top: .75em;
+    }
+    .products_section .categories h1 a{
+        font-family: "SauberScript";
+        font-weight: normal;
+        font-size: 64px;
+        margin-top: .75em;
+        text-decoration: none;
+        color : #000000;
+    }
+    @media (max-width: 600px) {
         .products_section .categories h1 {
           font-size: 42px; } }
     .products_section .categories .category ul {

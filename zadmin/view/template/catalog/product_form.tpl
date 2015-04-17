@@ -39,6 +39,9 @@
             <li><a href="#tab-design" data-toggle="tab"><?php echo $tab_design; ?></a></li>
           </ul>
           <div class="tab-content">
+
+            <!--================= General Tab ===========-->
+
             <div class="tab-pane active" id="tab-general">
               <ul class="nav nav-tabs" id="language">
                 <?php foreach ($languages as $language) { ?>
@@ -90,10 +93,29 @@
                       <input type="text" name="product_description[<?php echo $language['language_id']; ?>][tag]" value="<?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['tag'] : ''; ?>" placeholder="<?php echo $entry_tag; ?>" id="input-tag<?php echo $language['language_id']; ?>" class="form-control" />
                     </div>
                   </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="">
+                            <span data-toggle="tooltip" title="Category">Is promotion product?</span>
+                        </label>
+                        <div class="col-sm-10">
+                            <select name="isPromotionProduct" id="category_id_input" class="form-control">
+                                <?php if(isset($isPromotionProduct) && $isPromotionProduct == 1){ ?>
+                                    <option value="1" selected="selected">Yes</option>
+                                    <option value="0">No</option>
+                                <?php }else{ ?>
+                                    <option value="1">Yes</option>
+                                    <option value="0" selected="selected">No</option>
+                                <?php }?>
+                            </select>
+                        </div>
+                    </div>
+
                 </div>
                 <?php } ?>
               </div>
             </div>
+            <!-- ===========  End tab General ========== -->
+
             <div class="tab-pane" id="tab-data">
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-image"><?php echo $entry_image; ?></label>

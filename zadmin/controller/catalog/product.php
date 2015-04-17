@@ -741,6 +741,14 @@ class ControllerCatalogProduct extends Controller {
 			$data['product_description'] = array();
 		}
 
+        if (isset($this->request->post['isPromotionProduct'])) {
+            $data['isPromotionProduct'] = $this->request->post['isPromotionProduct'];
+        } elseif (!empty($product_info)) {
+            $data['isPromotionProduct'] = $product_info['isPromotionProduct'];
+        } else {
+            $data['isPromotionProduct'] = '';
+        }
+
 		if (isset($this->request->post['image'])) {
 			$data['image'] = $this->request->post['image'];
 		} elseif (!empty($product_info)) {
@@ -1035,7 +1043,6 @@ class ControllerCatalogProduct extends Controller {
 		} else {
 			$categories = array();
 		}
-
 		$data['product_categories'] = array();
 
 		foreach ($categories as $category_id) {

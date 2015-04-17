@@ -14,8 +14,6 @@
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" href="application/apple-touch-icon-57x57-precomposed.png">
 
-       
-
 		<link rel="stylesheet" href="<?php echo STATIC_FILE_PATH; ?>/css/style.css" />
         <script src="<?php echo STATIC_FILE_PATH; ?>/js/zepto.min.js"></script>
 		<script src="<?php echo STATIC_FILE_PATH; ?>/js/owl.carousel.js"></script>
@@ -36,12 +34,9 @@
 				<nav>
 					<a href="#navigation" id="hamburger"><i class="fa fa-bars"></i></a>
 					<ul id="navigation">
-						<li><a href="#">Menu</a></li>
-						<li><a href="#">Our Story</a></li>
-						<li><a href="#">Services</a></li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="#">Press<span class="optional"> &amp; Media</span></a></li>
-						<li><a href="#" >Locations</a></li>
+                        <?php foreach($categories as $category){ ?>
+                            <li><a href="<?php echo $category['link'];?>"><?php echo $category['name'];?></a></li>
+                        <?php } ?>
 					</ul>
 				</nav>
 
