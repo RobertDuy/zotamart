@@ -5,53 +5,29 @@
 		<div class="photos">
 			<div class="photo_wrap">
 				<div class="main">
-				    <img src="<?php echo STATIC_FILE_PATH; ?>/images/_0013_chocolate4_large.png" >
+                    <img src="<?php echo $product['image']?>" >
 				</div>
 				<div class="thumbs">
 					<ul>
-						<li>
-							<a href="images/_0013_chocolate4_large.png" class="thumb_btn">
-								<img src="<?php echo STATIC_FILE_PATH; ?>/images/_0013_chocolate4_small.png" >
-							</a>
-						</li>
-						<li>
-							<a href="images/chocolate4_1_large.JPG" class="thumb_btn">
-								<img src="<?php echo STATIC_FILE_PATH; ?>/images/chocolate4_1_small.JPG" >
-							</a>
-						</li>
-						<li>
-							<a href="images/chocolate4_2_large.jpg" class="thumb_btn">
-								<img src="<?php echo STATIC_FILE_PATH; ?>/images/chocolate4_2_small.jpg" >
-							</a>
-						</li>
-						<li>
-							<a href="images/chocolate4_3_large.jpg" class="thumb_btn">
-								<img src="<?php echo STATIC_FILE_PATH; ?>/images/chocolate4_3_small.jpg" >
-							</a>
-						</li>
+                        <?php foreach($product['thumbs'] as $thumb) { ?>
+                        <li>
+                            <a href="<?php echo $thumb['link']; ?>" class="thumb_btn">
+                                <img src="<?php echo $thumb['smallImage']?>" >
+                            </a>
+                        </li>
+                        <?php }?>
 					</ul>
 				</div>
 			</div>
 		</div>
 		<div class="details">
 			<div class="price">
-				$3.00			
+				<?php echo $product['price']?>
 			</div>
-			<h1>Chocolate<sup>4</sup></h1>
-			<div class="type_item">
-				<span class="icon_type">Type</span> Specialty									
-			</div>
-			<div class="type_item">
-				<span class="icon_type">Type</span> Cake									
-			</div>
-			<div class="type_item">
-				<span class="icon_mini">Mini</span> Available in Mini (by the dozen only)
-			</div>
-			<div class="description">
-				Chocolate cake with chocolate ganache glaze and topped with dark and white chocolate curls			
-			</div>
-           <div class="description"> <strong>Order must be placed by 2:00pm </strong><br></div>  
-            
+			<h1><?php echo $product['name'] ?></h1>
+
+            <?php echo $product['description'] ?>
+
 			<form method="GET" action="#" name="myform">
 				<input type="hidden" name="action" value="add_to_cart">
 				<input type="hidden" name="item_id" value="4">
@@ -60,8 +36,6 @@
               
               <!--Warning javascript-->
 				  <script>
-				 
-				  
 				  function Minimum()
 				  {
 				  var myqty = document.myform.qty;
@@ -86,7 +60,7 @@
 				</div>
 
                 <div id='mywarnings' class="mywarnings"></div>
-                           
+
 				<div class="controls">
 					<button class="add_to_cart" >Add To Cart</button>
 					<a href="#" class="continue_shopping">Continue Shopping</a>
@@ -105,182 +79,27 @@
 </section>
 
 <section class="product_upsell">
-
 	<div class="container">
 		<h1>More Doughnuts</h1>
 		<div class="product_list_wrap">
 			<div class="product_list_carousel_container">
 				<div class="product_list_carousel">
-					<div>
-						<a href="#">
-							<div class="thumb_wrap">
-								<img src="<?php echo STATIC_FILE_PATH; ?>/images/_0013_chocolate4_small.png">
-							</div>
-							<div class="menu_item_controls">
-								<div class="meta">
-									<h4>Chocolate<sup>4</sup></h4>
-									<div class="price">$3</div>
-								</div>
-							</div>
-						</a>
-					</div>
-											<div>
-							<a href="#">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/_0003_redvelvet_small.png">
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Red Velvet</h4>
-										<div class="price">$3</div>
-									</div>
-								</div>
-							</a>
-						</div>
-											<div>
-							<a href="#">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/_0001_vanillaglazed_small.png">
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Vanilla Bean Glazed</h4>
-										<div class="price">$2</div>
-									</div>
-								</div>
-							</a>
-						</div>
-											<div>
-							<a href="#">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/_0006_maplebacon_small.png">
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Maple Bacon Long John</h4>
-										<div class="price">$3</div>
-									</div>
-								</div>
-							</a>
-						</div>
-											<div>
-							<a href="#">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/_0017_applefritter_small.png">
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Fruit Fritter of the day</h4>
-										<div class="price">$3</div>
-									</div>
-								</div>
-							</a>
-						</div>
-											<div>
-							<a href="#">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/_0004_oldfashioned_small.png">
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Old Fashioned</h4>
-										<div class="price">$2.5</div>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div>
-							<a href="#">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/Sprinkle_small.png">
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Sprinkles</h4>
-										<div class="price">$2.5</div>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div>
-							<a href="#">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/_0015_birthday_small.png">
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Happy Birthday</h4>
-										<div class="price">$3</div>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div>
-							<a href="#">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/Peanut_Butter_small.png">
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Chocolate-Peanut Butter Bismarck</h4>
-										<div class="price">$3</div>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div>
-							<a href="#">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/Stawberry_cheesecake_small.png">
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Blackberry Cheesecake</h4>
-										<div class="price">$3</div>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div>
-							<a href="#">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/Raspberry_oreo_small.png">
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Raspberry Oreo</h4>
-										<div class="price">$3</div>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div>
-							<a href="#">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/Key_Lime_small.png">
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Key Lime Pie</h4>
-										<div class="price">$3</div>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div>
-							<a href="#">
-								<div class="thumb_wrap">
-									<img src="<?php echo STATIC_FILE_PATH; ?>/images/TerrysToffee_small.png">
-								</div>
-								<div class="menu_item_controls">
-									<div class="meta">
-										<h4>Terrys Toffee</h4>
-										<div class="price">$3</div>
-									</div>
-								</div>
-							</a>
-						</div>
-					</div>
+                    <?php foreach($moreProducts as $product){ ?>
+                    <div>
+                        <a href="<?php echo $product['link']?>">
+                            <div class="thumb_wrap">
+                                <img src="<?php echo $product['image']?>">
+                            </div>
+                            <div class="menu_item_controls">
+                                <div class="meta">
+                                    <h4><?php echo $product['product_name']?></h4>
+                                    <div class="price"><?php echo $product['price']?></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <?php } ?>
+				</div>
 			</div>
 		</div>
 	</div>
